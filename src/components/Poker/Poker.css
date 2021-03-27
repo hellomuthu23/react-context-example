@@ -1,0 +1,17 @@
+.GameContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.PlayerContainer {
+  border: 1px solid white;
+  max-width: 80vw;
+}
+
+.GameStatusContainer {
+  border: 1px solid white;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  max-width: 20vw;
+}

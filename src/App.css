@@ -1,0 +1,45 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: #282c34;
+  font-size: medium;
+  color: white;
+  height: 100vh;
+}
+
+Header {
+  justify-content: center;
+  text-align: center;
+}
+
+.ContentArea {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  min-height: 60%;
+  border: 1px solid white;
+}
+
+.LeftPanel {
+  width: 15%;
+}
+
+.MainContentArea {
+  width: 70%;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  overflow: auto;
+  padding: 20px;
+}
+
+.RightPanel {
+  width: 15%;
+}
+
+.Footer {
+  text-align: center;
+}
+
+label {
+  padding-bottom: 10px;
+}

@@ -1,0 +1,15 @@
+.GameStatus {
+  display: flex;
+  flex-direction: column;
+}
+
+.Status {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid grey;
+  padding: 20px;
+}
+
+.Winner {
+  padding: 20px;
+}

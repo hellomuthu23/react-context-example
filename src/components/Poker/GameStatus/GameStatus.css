@@ -13,3 +13,7 @@
 .Winner {
   padding: 20px;
 }
+
+label {
+  text-align: center;
+}

@@ -1,3 +1,10 @@
+export interface GameState {
+  players: Player[];
+  gameName: string;
+  winner: Player | null;
+  gameStatus: Status;
+}
+
 export enum Status {
   NotStarted = 'Not Started',
   InProgress = 'In Progress',
@@ -10,16 +17,10 @@ export interface Player {
   status: Status;
   value?: number;
 }
-export interface GameState {
-  players: Player[];
-  name: string;
-  winner: Player | null;
-  gameStatus: Status;
-}
 
 export const initialGameState: GameState = {
   players: [],
-  name: 'Game1',
+  gameName: 'Game1',
   winner: null,
   gameStatus: Status.NotStarted,
 };

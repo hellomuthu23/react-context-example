@@ -8,7 +8,6 @@ import {
 } from './actions';
 
 export function gameReducer(state: GameState, action: GameActions): GameState {
-  console.log(state);
   switch (action.type) {
     case ActionType.AddPlayer:
       return { ...state, players: [action.payload, ...state.players] };
@@ -46,20 +45,6 @@ export function gameReducer(state: GameState, action: GameActions): GameState {
   }
 }
 
-export const addPlayer = (player: Player): AddPlayer => ({
-  type: ActionType.AddPlayer,
-  payload: player,
-});
-
-export const setPlayerValue = (id: number, value: number): SetPlayerValue => ({
-  type: ActionType.SetPlayerValue,
-  payload: { id, value },
-});
-
-export const resetGame = (): ResetGame => ({
-  type: ActionType.ResetGame,
-});
-
 const getWinner = (players: Player[]): Player | null => {
   let winnerValue = 0;
   let winner = null;
@@ -88,3 +73,18 @@ const getGameStatus = (state: GameState): Status => {
   }
   return Status.InProgress;
 };
+
+// helper functions to simplify the caller
+export const addPlayer = (player: Player): AddPlayer => ({
+  type: ActionType.AddPlayer,
+  payload: player,
+});
+
+export const setPlayerValue = (id: number, value: number): SetPlayerValue => ({
+  type: ActionType.SetPlayerValue,
+  payload: { id, value },
+});
+
+export const resetGame = (): ResetGame => ({
+  type: ActionType.ResetGame,
+});

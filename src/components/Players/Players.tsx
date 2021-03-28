@@ -4,15 +4,7 @@ import { Player, Status } from '../../state/state';
 import { setPlayerValue } from '../../state/reducer';
 import './Players.css';
 
-export const PlayArea = () => {
-  return (
-    <>
-      <ActivePlayers></ActivePlayers>
-    </>
-  );
-};
-
-const ActivePlayers = () => {
+export const Players = () => {
   const { state, dispatch } = useContext(GameContext);
   const playPlayer = (id: number) => {
     const randomValue = Math.floor(Math.random() * 100);

@@ -263,7 +263,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
 
    ```
 
-   1. Add `PlayersList.tsx` component: This component will show list of players in the game. Again we use the amazing useContext hook to get list players from GameState.
+    2. Add `PlayersList.tsx` component: This component will show list of players in the game. Again we use the amazing useContext hook to get list players from GameState.
 
     ```ts
     export const PlayersList = () => {
@@ -279,7 +279,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
     };
     ```
 
-   2. Add `Players.tsx` component: This is the players play area component. The component will show the players status, card value and a button to play the game. Again we use the amazing useContext hook to get players status from GameState and dispatch player action.
+   3. Add `Players.tsx` component: This is the players play area component. The component will show the players status, card value and a button to play the game. Again we use the amazing useContext hook to get players status from GameState and dispatch player action.
 
     ```ts
     export const Players = () => {
@@ -311,7 +311,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
     };
     ```
 
-    1. Add `GameStatus.tsx` component. Now finally we need to add a component to display the game status and winner information. The component also has a button to restart/reset the game, when the game is reset it clears all players card value and reset the game status(refer the reducer file on how this is done)
+    4. Add `GameStatus.tsx` component. Now finally we need to add a component to display the game status and winner information. The component also has a button to restart/reset the game, when the game is reset it clears all players card value and reset the game status(refer the reducer file on how this is done)
 
     ```ts
     export const GameStatus = () => {
@@ -342,13 +342,13 @@ Note: All the code sample mentioned below can be found in the github repo [here]
 
 8. **Add css file**: copy the required css files from the github repo here: <https://github.com/hellomuthu23/react-context-example>
 
-9. **Play the Game**: Once you have adding all necessary components, css and states, you should be ready to play the game and see the use of useContext and useReducer hooks in action.
+9.  **Play the Game**: Once you have adding all necessary components, css and states, you should be ready to play the game and see the use of useContext and useReducer hooks in action.
 
 ![Game](./docs/game.jpg)
 
 ## Conclusion
 
-Hope you had fun creating useContext and useReducer hooks and playing the game. As you have seen, the component looks lot clean without too many props and easy to manage the state/actions using useContext hook.
+Hope you had fun creating useContext and useReducer hooks and playing the game. As you have seen, the components looks lot clean without too many props/state and easy to manage the state/actions using useContext hook.
 
 Full working demo:
 Github repo: <https://github.com/hellomuthu23/react-context-example>

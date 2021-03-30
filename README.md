@@ -189,7 +189,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
     ```
 
 6. **Add useContext and useReducer hook** to the App: Now that we have created necessary context,state etc, we can add them into the app.
-   1. Create a new component `Poker.tsx` for the poker game and add Context and useReducer hook as below. Ignore the errors for <PlayerList />,  <Players /> , <GameStatus /> and <AddPlayer /> components for now, we will add these components in the coming steps.
+   1. Create a new component `Poker.tsx` for the poker game and add Context and useReducer hook as below. Ignore the errors for `<PlayerList />,  <Players /> , <GameStatus /> and <AddPlayer />` components for now, we will add these components in the coming steps.
     `GameContext.Provider` is the context provider here, any child component under this provider will have access to the context(i.e state and dispatch)
 
     ```tsx
@@ -342,13 +342,14 @@ Note: All the code sample mentioned below can be found in the github repo [here]
 
 8. **Add css file**: copy the required css files from the github repo here: <https://github.com/hellomuthu23/react-context-example>
 
-9.  **Play the Game**: Once you have adding all necessary components, css and states, you should be ready to play the game and see the use of useContext and useReducer hooks in action.
+9. **Play the Game**: Once you have adding all necessary components, css and states, you should be ready to play the game and see the use of useContext and useReducer hooks in action.
 
-![Game](./docs/game.jpg)
+![Game](https://github.com/hellomuthu23/react-context-example/blob/master/docs/game.jpg)
 
 ## Conclusion
 
 Hope you had fun creating useContext and useReducer hooks and playing the game. As you have seen, the components looks lot clean without too many props/state and easy to manage the state/actions using useContext hook.
 
-Full working demo:
+Full working demo: <https://codesandbox.io/s/quirky-grass-4f0yf?fontsize=14&hidenavigation=1&theme=dark>
+
 Github repo: <https://github.com/hellomuthu23/react-context-example>

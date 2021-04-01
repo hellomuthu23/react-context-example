@@ -2,9 +2,9 @@
 
 ## Introduction
 
-Is your components are complex with too many states and props?. its time to use UseReducer and UseContext hooks now. This will help your components look cleaner and simple.
+Are your components complex with too many states and props?. It is time to use UseReducer and UseContext hooks now. This will help your components look cleaner and simple.
 
-In this article we will see how to use useReducer and useContext hooks together with typescript in a step by step guide. If you are not familiar with useReducer and useContext, have read through in ReactJS site
+In this article, we will see how to use useReducer and useContext hooks together with typescript in a step-by-step guide. If you are not familiar with useReducer and useContext, have read through in ReactJS site
 
 **What is useReducer?.**
 <https://reactjs.org/docs/hooks-reference.html#usereducer>
@@ -28,7 +28,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
 
     Navigate to react-context-app and run `yarn start` command to start the app. Access the app <http://localhost:3000>
 
-1. **Add State**: Let's create a GameState which will hold the game state, the state will have players, gameName, winner details and game status.
+1. **Add State**: Let's create a GameState that will hold the game state, the state will have players, gameName, winner details, and game status.
    - Create `state.ts` with GameState and initial state
 
     ```ts
@@ -60,8 +60,8 @@ Note: All the code sample mentioned below can be found in the github repo [here]
     };
     ```
 
-1. **Add Actions**: Now let's add required Actions types for the poker games, actions like adding player to the game, resetting game and playing the game.
-   - Create `actions.ts` with below actions
+1. **Add Actions**: Now let's add required Actions types for the poker games, actions like adding a player to the game, resetting the game, and playing the game.
+   - Create `actions.ts` with the below actions
 
     ```ts
     export enum ActionType {
@@ -88,8 +88,8 @@ Note: All the code sample mentioned below can be found in the github repo [here]
 
     ```
 
-1. **Add Reducer**: Let's add a reducer file which will update the state for specific/required actions and side effects(calculate winner, game status etc).
-   - Create `reducer.ts` with below functions
+1. **Add Reducer**: Let's add a reducer file that will update the state for specific/required actions and side effects(calculate winner, game status, etc).
+   - Create `reducer.ts` with the below functions
 
     ```ts
     export function gameReducer(state: GameState, action: GameActions): GameState {
@@ -176,7 +176,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
     ```
 
 1. **Add Context**: Now let's add a context file
-   - Create `context.ts` with below GameContext that uses the above created State
+   - Create `context.ts` with below GameContext that uses the above-created State
 
     ```ts
         export const GameContext = React.createContext<{
@@ -188,7 +188,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
         });
     ```
 
-1. **Add useContext and useReducer hook** to the App: Now that we have created necessary context,state etc, we can add them into the app.
+1. **Add useContext and useReducer hook** to the App: Now that we have created the necessary context, state, etc, we can add them into the app.
    - Create a new component `Poker.tsx` for the poker game and add Context and useReducer hook as below. Ignore the errors for `<PlayerList />,  <Players /> , <GameStatus /> and <AddPlayer />` components for now, we will add these components in the coming steps.
     `GameContext.Provider` is the context provider here, any child component under this provider will have access to the context(i.e state and dispatch)
 
@@ -225,7 +225,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
 
 1. **Add Components**: It's time to add the components and play the game.
 
-   - Add `AddPlayer.tsx` component: This component will the responsible to adding new players to the game and updating the GameState using dispatch actions. We can access the GameState/Reducer using the useContext Hook here, `useContext(GameContext)`
+   - Add `AddPlayer.tsx` component: This component will be responsible for adding new players to the game and updating the GameState using dispatch actions. We can access the GameState/Reducer using the useContext Hook here, `useContext(GameContext)`
 
     ```ts
     export const AddPlayer = () => {
@@ -265,7 +265,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
     };
     ```
 
-   - Add `PlayersList.tsx` component: This component will show list of players in the game. Again we use the amazing useContext hook to get list players from GameState.
+   - Add `PlayersList.tsx` component: This component will show a list of players in the game. Again we use the amazing useContext hook to get list players from GameState.
 
     ```ts
     export const PlayersList = () => {
@@ -281,7 +281,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
     };
     ```
 
-   - Add `Players.tsx` component: This is the players play area component. The component will show the players status, card value and a button to play the game. Again we use the amazing useContext hook to get players status from GameState and dispatch player action.
+   - Add `Players.tsx` component: This is the player's play area component. The component will show the player's status, card value, and a button to play the game. Again we use the amazing useContext hook to get players status from GameState and dispatch player action.
 
     ```ts
     export const Players = () => {
@@ -344,7 +344,7 @@ Note: All the code sample mentioned below can be found in the github repo [here]
 
 **Add css file**: copy the required css files from the github repo here: <https://github.com/hellomuthu23/react-context-example>
 
-**Play the Game**: Once you have adding all necessary components, css and states, you should be ready to play the game and see the use of useContext and useReducer hooks in action.
+**Play the Game**: Once you have added all necessary components, css and states, you should be ready to play the game and see the use of useContext and useReducer hooks in action.
 
 ## Conclusion
 

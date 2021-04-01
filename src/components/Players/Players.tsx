@@ -23,7 +23,7 @@ export const Players = () => {
               disabled={player.status !== Status.NotStarted}
               onClick={() => playPlayer(player.id)}
             >
-              Show Card
+              Play
             </button>
           </div>
         ))}
